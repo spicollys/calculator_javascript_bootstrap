@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Calculator.js</title>
+	<link rel="icon" href="imagens/favicon.png">
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="calculator-header col-4 centered-col">
+				<h5>Calculator.js</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4 centered-col">
+				<div class="row">
+					<input type="text" id="error" class="col-1  form-control" placeholder="" readonly/>
+					<input type="text" id="result" class="col-8  form-control" placeholder="0" readonly/>
+					<input type="text" id="operation" class="col-3  form-control" placeholder="" readonly/>	
+				</div>
+			</div>		
+		</div>
+
+
+		<div class="row">
+			<div class="centered-col col-4">
+				<div class="row">
+					<button class="btn col-3 btn-secondary" onclick="calc.filterInput('7')">7</button>
+					<button class="btn col-3 btn-secondary" onclick="calc.filterInput('8')">8</button>
+					<button class="btn col-3 btn-secondary" onclick="calc.filterInput('9')">9</button>
+					<button class="btn col-3 btn-outline-secondary" onclick="calc.addOperator('&divide;')">&divide;</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="centered-col col-4">
+				<div class="row">
+					<button class="btn col-3 btn-secondary" onclick="calc.filterInput('4')">4</button>
+					<button class="btn col-3 btn-secondary" onclick="calc.filterInput('5')">5</button>
+					<button class="btn col-3 btn-secondary" onclick="calc.filterInput('6')">6</button>
+					<button class="btn col-3 btn-outline-secondary" onclick="calc.addOperator('&times;')">&times;</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="centered-col col-4">
+				<div class="row">
+					<button class="btn col-3 btn-secondary" onclick="calc.filterInput('1')">1</button>
+					<button class="btn col-3 btn-secondary" onclick="calc.filterInput('2')">2</button>
+					<button class="btn col-3 btn-secondary" onclick="calc.filterInput('3')">3</button>
+					<button class="btn col-3 btn-outline-secondary" onclick="calc.addOperator('&minus;')">&minus;</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="centered-col col-4">
+				<div class="row">
+					<button class="btn col-3 btn-secondary" onclick="calc.filterInput('0')">0</button>
+					<button class="btn col-3 btn-outline-secondary" onclick="calc.filterInput('.')"><strong>.</strong></button>
+					<button class="btn col-3 btn-primary" onclick="calc.addOperator('=')">=</button>
+					<button class="btn col-3 btn-outline-secondary" onclick="calc.addOperator('&plus;')">&plus;</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="centered-col col-4">
+				<div class="row">
+					<button onclick="calc.popLastOnDisplay()" class="btn col-6 btn-warning">&#x27F5</button>
+					<button onclick="calc.clearEverything()" class="btn col-6 btn-danger">CE</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<script src="js/calc.js"></script>
+
+</body>
+</html>
